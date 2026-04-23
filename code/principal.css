@@ -1,4 +1,7 @@
-/* CORES E TAMANHOS */
+/* =========================================================
+   VARIÁVEIS GLOBAIS
+   Cores, sombras, raios e largura máxima do layout
+========================================================= */
 :root {
     --cor-fundo: #f3ede3;
     --cor-superficie: rgba(255, 250, 244, 0.8);
@@ -15,7 +18,10 @@
     --largura-maxima: 1180px;
 }
 
-/* REGRA GERAL */
+/* =========================================================
+   REGRAS GERAIS
+   Reset básico e estilos globais
+========================================================= */
 * {
     box-sizing: border-box;
 }
@@ -46,7 +52,9 @@ section {
     scroll-margin-top: 110px;
 }
 
-/* ESTRUTURA GERAL */
+/* =========================================================
+   ESTRUTURA GERAL DA PÁGINA
+========================================================= */
 .pagina {
     width: min(calc(100% - 32px), var(--largura-maxima));
     margin: 16px auto 40px;
@@ -69,6 +77,7 @@ section {
         #fff;
 }
 
+/* Efeito decorativo no canto inferior direito do topo */
 .topo::after {
     content: "";
     position: absolute;
@@ -92,14 +101,16 @@ main {
     animation: aparecer 0.8s ease both;
 }
 
-/* MENU */
+/* =========================================================
+   MENU DE NAVEGAÇÃO
+========================================================= */
 .menu {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 24px;
     margin-bottom: 18px;
-    position:static;
+    position: static;
     top: 10px;
     z-index: 1000;
     padding: 14px 20px;
@@ -109,6 +120,7 @@ main {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
+/* Nome/logótipo no menu */
 .logo {
     font-family: "Fraunces", serif;
     font-size: 1.1rem;
@@ -117,9 +129,9 @@ main {
     letter-spacing: 0.04em;
     padding: 10px 14px;
     border-radius: 999px;
-    
 }
 
+/* Área dos links do menu */
 .menu-links {
     display: flex;
     flex-wrap: wrap;
@@ -131,6 +143,7 @@ main {
     transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
 }
 
+/* Estilo de cada link do menu */
 .menu-links a {
     padding: 10px 14px;
     border-radius: 999px;
@@ -138,6 +151,8 @@ main {
     color: var(--cor-texto-suave);
     transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
 }
+
+/* Efeitos hover/focus no logótipo e links */
 .logo:hover,
 .menu-links a:hover,
 .menu-links a:focus-visible {
@@ -146,11 +161,13 @@ main {
     transform: translateY(-1px) scale(1.03);
 }
 
-.logo:hover{
+.logo:hover {
     background-color: #efe6d8;
 }
 
-/* TEXTOS */
+/* =========================================================
+   TIPOGRAFIA E TEXTOS
+========================================================= */
 .rotulo {
     margin: 0 0 14px;
     font-size: 0.78rem;
@@ -188,7 +205,9 @@ p {
     color: var(--cor-texto-suave);
 }
 
-/* HERO */
+/* =========================================================
+   SECÇÃO HERO / APRESENTAÇÃO INICIAL
+========================================================= */
 .hero {
     display: grid;
     grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
@@ -196,12 +215,14 @@ p {
     align-items: center;
 }
 
+/* Texto descritivo da área principal */
 .descricao-hero {
     max-width: 60ch;
     margin-top: 20px;
     font-size: 1.05rem;
 }
 
+/* Área dos botões principais */
 .hero-botoes {
     display: flex;
     flex-wrap: wrap;
@@ -209,7 +230,7 @@ p {
     margin-top: 28px;
 }
 
-
+/* Estilo base dos botões */
 .botao,
 .botao-falar {
     display: inline-flex;
@@ -223,27 +244,32 @@ p {
     transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
 }
 
+/* Efeito ao passar o rato / navegar com teclado */
 .botao:hover,
 .botao:focus-visible {
-    transform: translateY(-2px)scale(1.03);
+    transform: translateY(-2px) scale(1.03);
 }
 
+/* Botão principal */
 .botao-falar {
     color: #fff;
     background: linear-gradient(135deg, var(--cor-marca), var(--cor-marca-escura));
     box-shadow: 0 14px 24px rgba(115, 54, 31, 0.22);
 }
 
+/* Botão secundário */
 .botao-experiencia {
     border: 1px solid var(--cor-linha);
     background: rgba(255, 255, 255, 0.7);
 }
 
+/* Lado direito da hero */
 .hero-lado {
     display: grid;
     gap: 18px;
 }
 
+/* Moldura da imagem principal */
 .foto-principal {
     padding: 14px;
     border-radius: 32px;
@@ -259,6 +285,9 @@ p {
     border-radius: 24px;
 }
 
+/* =========================================================
+   CARTÕES GERAIS
+========================================================= */
 .cartao-info,
 .mini-cartao,
 .cartao-experiencia,
@@ -272,6 +301,7 @@ p {
     box-shadow: 0 10px 24px rgba(31, 42, 44, 0.06);
 }
 
+/* Cartão de informação rápida na hero */
 .cartao-info {
     display: grid;
     grid-template-columns: auto 1fr;
@@ -287,7 +317,9 @@ p {
     color: var(--cor-texto-suave);
 }
 
-/* CABEÇALHOS DE SECÇÃO */
+/* =========================================================
+   CABEÇALHOS DAS SECÇÕES
+========================================================= */
 .cabecalho-secao {
     display: grid;
     gap: 10px;
@@ -298,6 +330,7 @@ p {
     max-width: 58ch;
 }
 
+/* Estrutura com texto lateral e conteúdo ao lado */
 .bloco-lateral {
     display: grid;
     grid-template-columns: minmax(240px, 0.8fr) minmax(0, 1.2fr);
@@ -311,7 +344,9 @@ p {
     top: 90px;
 }
 
-/* SOBRE */
+/* =========================================================
+   SECÇÃO SOBRE
+========================================================= */
 .grelha-sobre {
     display: grid;
     grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
@@ -341,7 +376,9 @@ p {
     margin-top: 10px;
 }
 
-/* COMPETÊNCIAS */
+/* SECÇÃO COMPETÊNCIAS */
+
+
 .grelha-competencias {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -349,6 +386,7 @@ p {
     align-content: start;
 }
 
+/* Cartões com logos/competências */
 .cartao-competencia {
     display: flex;
     align-items: center;
@@ -365,6 +403,7 @@ p {
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
+/* Camada decorativa/overlay */
 .cartao-competencia::before {
     content: "";
     position: absolute;
@@ -383,6 +422,7 @@ p {
     font-weight: 700;
 }
 
+/* Imagens de fundo para cada competência */
 .illustrator {
     background-image: url("Imagens/illustrator.png");
 }
@@ -407,7 +447,8 @@ p {
     background-image: url("Imagens/java.png");
 }
 
-/* EXPERIÊNCIA */
+/* SECÇÃO EXPERIÊNCIA  */
+
 .grelha-experiencia {
     display: grid;
     gap: 18px;
@@ -423,6 +464,7 @@ p {
     transform: translateY(-4px) scale(1.1);
 }
 
+/* Linha decorativa no topo do cartão */
 .cartao-experiencia::before {
     content: "";
     position: absolute;
@@ -434,6 +476,7 @@ p {
     background: linear-gradient(90deg, var(--cor-marca), var(--cor-destaque));
 }
 
+/* Período temporal da experiência */
 .periodo {
     display: inline-block;
     margin-top: 12px;
@@ -445,6 +488,7 @@ p {
     font-size: 0.82rem;
 }
 
+/* Cargo desempenhado */
 .cargo {
     margin-top: 8px;
     margin-bottom: 10px;
@@ -452,7 +496,9 @@ p {
     font-weight: 700;
 }
 
-/* PROJETOS */
+
+/* SECÇÃO PROJETOS */
+
 .grelha-projetos {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -468,11 +514,15 @@ p {
     transition: transform 0.28s ease, box-shadow 0.28s ease;
 }
 
+/* Efeito hover nos cartões de projeto */
+
 .cartao-projeto-elegance:hover,
 .cartao-projeto:hover {
     transform: translateY(-6px) scale(1.1);
     box-shadow: 0 20px 36px rgba(31, 42, 44, 0.12);
 }
+
+/* Imagens dos projetos */
 
 .cartao-projeto-elegance img,
 .cartao-projeto img {
@@ -482,6 +532,7 @@ p {
     object-position: 55% center;
 }
 
+/* Texto interno dos projetos */
 
 .texto-projeto {
     display: grid;
@@ -489,13 +540,15 @@ p {
     padding: 20px;
 }
 
+/* SECÇÃO CONTACTO */
 
-/* CONTACTO */
 .grelha-contacto {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 16px;
 }
+
+/* Cartões clicáveis de contacto */
 
 .cartao-contacto {
     display: grid;
@@ -523,36 +576,36 @@ p {
     transform: translateY(-3px) scale(1.03);
 }
 
+/* BOTÃO FIXO PARA VOLTAR AO TOPO*/
 
-/* Botão Topo */
 .botao-topo {
-  position: fixed;
-  bottom: 50px;
-  right: 50px;
-  background-color: #000;
-  color: #fff;
-  padding: 0;
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  text-decoration: none;
-  font-size: 18px;
-  opacity: 0.7;
-  transition: 0.3s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 999;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    background-color: #000;
+    color: #fff;
+    padding: 0;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 18px;
+    opacity: 0.7;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
 }
 
 .botao-topo:hover {
-  opacity: 1;
-  background-color: white;
-  color: #000;
+    opacity: 1;
+    background-color: white;
+    color: #000;
 }
 
+ /* ANIMAÇÃO DE ENTRADA*/
 
-/* ANIMAÇÃO */
 @keyframes aparecer {
     from {
         opacity: 0;
@@ -565,7 +618,8 @@ p {
     }
 }
 
-/* TABLET */
+/*  RESPONSIVIDADE - TABLET */
+
 @media (max-width: 960px) {
     .hero,
     .grelha-sobre,
@@ -589,7 +643,8 @@ p {
     }
 }
 
-/* TELEMÓVEL */
+/* RESPONSIVIDADE - TELEMÓVEL*/
+
 @media (max-width: 720px) {
     .pagina {
         width: min(calc(100% - 20px), var(--largura-maxima));
