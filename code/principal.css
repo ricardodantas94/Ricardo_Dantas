@@ -1,7 +1,6 @@
-/* =========================================================
-   VARIÁVEIS GLOBAIS
-   Cores, sombras, raios e largura máxima do layout
-========================================================= */
+/* VARIÁVEIS GLOBAIS
+ Cores, sombras, raios e largura máxima do layout*/
+
 :root {
     --cor-fundo: #f3ede3;
     --cor-superficie: rgba(255, 250, 244, 0.8);
@@ -18,10 +17,9 @@
     --largura-maxima: 1180px;
 }
 
-/* =========================================================
-   REGRAS GERAIS
-   Reset básico e estilos globais
-========================================================= */
+/* REGRAS GERAIS
+Reset básico e estilos globais */
+
 * {
     box-sizing: border-box;
 }
@@ -52,9 +50,8 @@ section {
     scroll-margin-top: 110px;
 }
 
-/* =========================================================
-   ESTRUTURA GERAL DA PÁGINA
-========================================================= */
+/* ESTRUTURA GERAL DA PÁGINA */
+
 .pagina {
     width: min(calc(100% - 32px), var(--largura-maxima));
     margin: 16px auto 40px;
@@ -101,9 +98,8 @@ main {
     animation: aparecer 0.8s ease both;
 }
 
-/* =========================================================
-   MENU DE NAVEGAÇÃO
-========================================================= */
+/* MENU DE NAVEGAÇÃO*/
+
 .menu {
     display: flex;
     align-items: center;
@@ -166,9 +162,8 @@ main {
     background-color: #efe6d8;
 }
 
-/* =========================================================
-   TIPOGRAFIA E TEXTOS
-========================================================= */
+/*TIPOGRAFIA E TEXTOS */
+
 .rotulo {
     margin: 0 0 14px;
     font-size: 0.78rem;
@@ -206,9 +201,9 @@ p {
     color: var(--cor-texto-suave);
 }
 
-/* =========================================================
-   SECÇÃO HERO / APRESENTAÇÃO INICIAL
-========================================================= */
+/* SECÇÃO HERO / APRESENTAÇÃO INICIAL*/
+
+
 .hero {
     display: grid;
     grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
@@ -286,9 +281,8 @@ p {
     border-radius: 24px;
 }
 
-/* =========================================================
-   CARTÕES GERAIS
-========================================================= */
+/* CARTÕES */
+
 .cartao-info,
 .mini-cartao,
 .cartao-experiencia,
@@ -318,9 +312,8 @@ p {
     color: var(--cor-texto-suave);
 }
 
-/* =========================================================
-   CABEÇALHOS DAS SECÇÕES
-========================================================= */
+/* CABEÇALHOS DAS SECÇÕES*/
+
 .cabecalho-secao {
     display: grid;
     gap: 10px;
@@ -345,9 +338,8 @@ p {
     top: 90px;
 }
 
-/* =========================================================
-   SECÇÃO SOBRE
-========================================================= */
+/* SECÇÃO SOBRE*/
+
 .grelha-sobre {
     display: grid;
     grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
