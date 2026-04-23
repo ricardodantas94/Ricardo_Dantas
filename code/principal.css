@@ -129,6 +129,7 @@ main {
     letter-spacing: 0.04em;
     padding: 10px 14px;
     border-radius: 999px;
+    transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
 }
 
 /* Área dos links do menu */
