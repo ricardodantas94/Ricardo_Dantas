@@ -581,57 +581,23 @@ p {
 
 /* Responsividade - telemóvel */
 @media (max-width: 720px) {
-    .pagina {
-        width: min(calc(100% - 20px), var(--largura-maxima));
-        margin-top: 10px;
-    }
-
-    .topo,
-    .secao {
-        padding: 20px;
-        border-radius: 24px;
-    }
-
     .menu {
         padding: 12px 14px;
     }
 
     .menu-links {
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        white-space: nowrap;
-        padding: 8px 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        overflow-x: visible;
+        white-space: normal;
+        padding: 8px 0;
         font-size: 0.85rem;
     }
 
-    h1 {
-        max-width: 100%;
-        font-size: clamp(2.2rem, 12vw, 3.4rem);
-    }
-
-    h2 {
-        max-width: 100%;
-    }
-
-    .hero {
-        grid-template-columns: 1fr;
-    }
-
-    .hero-botoes {
-        flex-direction: column;
-    }
-
-    .botao {
-        width: 100%;
-    }
-
-    .grelha-competencias,
-    .grelha-contacto {
-        grid-template-columns: 1fr;
-    }
-
-    .cartao-projeto,
-    .cartao-projeto-elegance img {
-        height: 200px;
+    .menu-links a {
+        padding: 8px 10px;
+        text-align: center;
     }
 }
